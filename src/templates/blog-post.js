@@ -20,29 +20,32 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ""}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </div>
-        </div>
+      <div class="card-wrapper">
+    <div class="card">
+      <div class="image-wrapper">
+        <a class="image-link" href="">
+<img src='https://drscdn.500px.org/photo/92064849/m%3D900/v2?webp=true&sig=11d9fce5c5ec6d7b5ace21eff0cf8103b220658bc787b801dfe37ddc8e0b3d48' alt='Beautiful woman face by Oleg Gekman on 500px.com'/>
+        </a>
       </div>
+      <div class="text-box-wrapper">
+      <div class="text-box">
+        <h1 class="heading">
+          Fashion Week Styles
+        </h1>
+
+        <p  class="text">
+          Let's get this straight out of the way. Fashion in 2018 has been really hot. From Gucci sandals to Fendi handbags, we saw all of our favorite brands . .
+        </p>
+      </div>
+     </div>
+      
+      <div class="button-wrapper">
+          <a class="button" href="">
+            Read More
+          </a>
+      </div>
+    </div>
+  </div>
     </section>
   );
 };
@@ -60,22 +63,34 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
+
+
+<div class="card-wrapper">
+    <div class="card">
+      <div class="image-wrapper">
+        <a class="image-link" href="">
+<img src='https://drscdn.500px.org/photo/92064849/m%3D900/v2?webp=true&sig=11d9fce5c5ec6d7b5ace21eff0cf8103b220658bc787b801dfe37ddc8e0b3d48' alt='Beautiful woman face by Oleg Gekman on 500px.com'/>
+        </a>
+      </div>
+      <div class="text-box-wrapper">
+      <div class="text-box">
+        <h1 class="heading">
+          Fashion Week Styles
+        </h1>
+
+        <p  class="text">
+          Let's get this straight out of the way. Fashion in 2018 has been really hot. From Gucci sandals to Fendi handbags, we saw all of our favorite brands . .
+        </p>
+      </div>
+     </div>
+      
+      <div class="button-wrapper">
+          <a class="button" href="">
+            Read More
+          </a>
+      </div>
+    </div>
+  </div>
     </Layout>
   );
 };

@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'PPEditorialNewItalic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('PPEditorialNew-Italic.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'PPEditorialUltrabold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('PPEditorialNew-Ultrabold.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialUltraboldItalic';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('PPEditorialNew-UltraboldItalic.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialUltralight';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src:  url("PPEditorialNew-Ultralight.otf") format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'PPEditorialUltralightItalic';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('PPEditorialNew-UltralightItalic.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialUltralightRegular';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('PPEditorialNew-Regular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialOldRegular';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('PPEditorialOld-Regular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialOldItalic';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('PPEditorialOld-Italic.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialOldThin';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('PPEditorialOld-Ultralight.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'PPEditorialOldBold';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('PPEditorialOld-Ultrabold.otf') format('opentype');
+  }

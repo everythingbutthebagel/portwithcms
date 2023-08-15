@@ -1,75 +1,43 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
-
-import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link, graphql } from 'gatsby';
+import { getImage } from 'gatsby-plugin-image';
+import Grid from '@material-ui/core/Grid';
+import Layout from '../components/Layout';
+import flower from '../img/flowers.png'
+import BlogRoll from '../components/BlogRoll';
 
 // eslint-disable-next-line
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-}) => {
-  const heroImage = getImage(image) || image;
+export const IndexPageTemplate = ({ image, title, heading, subheading, mainpitch, description, intro }) => {
 
   return (
-    <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="content" style={{ flexDirection: 'column' }}>
+      <div className="home-studies">
+        <div className="max-width-container">
+          <div className="experience-desktop-padding">
+            <Grid container className=" wrap-reverse">
+              <Grid item xs={12} lg={12} className="experience-photos flex-direction-column align-items-start">
+                <img src={flower} style={{ marginBottom: '20px' }} />
+                <h2>I'm Jordan Stephenson</h2>
+                <p>
+                  Your friendly neighborhood product leader. I am passionate about building excellent
+                  products that improve the lives of those around me. “There is nothing so useless as doing efficiently that which should
+                  not be done at all.”
+                </p>
+              </Grid>
+            </Grid>
           </div>
         </div>
-      </section>
+        <div className="column is-12">
+          <h3 className="has-text-weight-semibold is-size-2">Latest stories</h3>
+          <BlogRoll />
+          <div className="column is-12 has-text-centered">
+            <Link className="btn" to="/blog">
+              Read more
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

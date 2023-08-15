@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import AboutPage from "../pages/about";
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -32,25 +33,26 @@ AboutPageTemplate.propTypes = {
   contentComponent: PropTypes.func,
 };
 
-const AboutPage = ({ data }) => {
+const AboutPageTemp = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
-    </Layout>
+    <AboutPage/>
+    // <Layout>
+    //   <AboutPageTemplate
+    //     contentComponent={HTMLContent}
+    //     title={post.frontmatter.title}
+    //     content={post.html}
+    //   />
+    // </Layout>
   );
 };
 
-AboutPage.propTypes = {
+AboutPageTemp.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default AboutPage;
+export default AboutPageTemp;
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {

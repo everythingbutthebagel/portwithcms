@@ -36,6 +36,15 @@ module.exports = {
         name: "images",
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["PPEditorialUltralight", "PPEditorialNewItalic", 'PPEditorialUltrabold', 'PPEditorialUltralight', 'PPEditorialUltralightItalic', 'PPEditorialUltralightRegular', 'PPEditorialOldRegular', 'PPEditorialOldItalic', 'PPEditorialOld-Ultralight', 'PPEditorialOldBold'],
+          urls: ["/fonts.css"],
+        },
+      },
+    },
     `gatsby-plugin-image`,
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
